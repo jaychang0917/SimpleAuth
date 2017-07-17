@@ -29,7 +29,6 @@ dependencies {
 ```
 [![](https://jitpack.io/v/jaychang0917/Simpleauth.svg)](https://jitpack.io/#jaychang0917/Simpleauth)
 
----
 
 ## Basic Usage
 #### 1. Configure the SimpleAuth
@@ -77,11 +76,9 @@ void connectFacebook() {
 }
 ```
 
----
-
 ## Advanced Usage
 #### Disconnection
-Clear the active session if the social app is installed in the device, otherwise
+The active session will be cleared if the social app is installed in the device, otherwise app cookies will be cleared (i.e. user need to login again)
 ```java
 void disconnectFacebook() {
   SimpleAuth.getInstance().disconnectFacebook();
