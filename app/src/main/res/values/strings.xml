@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SimpleAuth</string>
+    <string name="connect_fb">connect Facebook</string>
+    <string name="connect_google">connect Google</string>
+    <string name="connect_twitter">connect Twitter</string>
+    <string name="connect_ig">connect Instagram</string>
+</resources>

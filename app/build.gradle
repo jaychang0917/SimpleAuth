@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId "demo.simpleauth"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+android.defaultConfig.manifestPlaceholders = [
+        facebookAppId        : "189953571452011",
+        googleWebClientId    : "775503623453-sqk59kuvr2f8qkb9fkcnhef5uvn9riu4.apps.googleusercontent.com",
+        twitterConsumerKey   : "r59jTevJfWg6YDGldRGiks8Rl",
+        twitterConsumerSecret: "MQAQtngew0imjGduM3mEbWE1fdUbGOekYEcvm0ybCoJy5FUrju",
+        instagramClientId    : "76bedc2d27dd4e52841e576d4ce8cc79",
+        instagramClientSecret: "28d91eb23ab440beb55b3a3f112f4bb2",
+        instagramRedirectUri : "https://localhost/oauth2redirect"
+]
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.jakewharton:butterknife:8.7.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
+    compile project(':library')
+}

@@ -1,0 +1,57 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#555"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/connectFbButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:background="#3b5998"
+        android:text="@string/connect_fb"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/connectGoogleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:background="#34a853"
+        android:text="@string/connect_google"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/connectTwitterButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#1da1f2"
+        android:text="@string/connect_twitter"
+        android:textAllCaps="false"
+        android:layout_marginBottom="30dp"
+        android:textSize="18sp"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/connectIgButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#ca2e98"
+        android:text="@string/connect_ig"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
