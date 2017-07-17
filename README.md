@@ -3,11 +3,6 @@
 
 A easy to use social authentication android library. (Facebook, Google, Twitter, Instagram)
 
-## Sample Project
-<img src="https://github.com/jaychang0917/SimpleAuth/blob/master/art/qr_code_1_0_0.jpg" width="100" height="100">
-
-[Sample apk](https://github.com/jaychang0917/SimpleAuth/blob/master/art/SimpleAuth_1_0_0.apk)
-
 ## Installation
 In your project level build.gradle :
 
