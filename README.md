@@ -50,7 +50,7 @@ void connectFacebook() {
     @Override
     public void onSuccess(SocialUser socialUser) {
       Log.d(TAG, "userId:" + socialUser.userId)
-      Log.d(TAG, "email:" + socialUser.userId)
+      Log.d(TAG, "email:" + socialUser.email)
       Log.d(TAG, "accessToken:" + socialUser.accessToken)
       Log.d(TAG, "profilePictureUrl:" + socialUser.profilePictureUrl)
       Log.d(TAG, "username:" + socialUser.username)
