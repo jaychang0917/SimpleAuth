@@ -89,7 +89,7 @@ void revokeFacebook() {
 ```
 
 ## Remark
-- Google auth
+#### Google auth
 Please be reminded that to create an **Android** oauth client and fill in **SHA1** of your release keystore for release build variant.
 
 ## License
