@@ -27,7 +27,7 @@ public class TwitterAuthActivity extends SimpleAuthActivity {
   private Callback<TwitterSession> callback = new Callback<TwitterSession>() {
     @Override
     public void success(Result<TwitterSession> result) {
-      handleSuccess(result);
+      handleSuccess(result.data);
     }
 
     @Override
@@ -46,7 +46,12 @@ public class TwitterAuthActivity extends SimpleAuthActivity {
   protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
-    getTwitterAuthClient().authorize(this, callback);
+    TwitterSession activeSession = TwitterCore.getInstance().getSessionManager().getActiveSession();
+    if (activeSession != null) {
+      handleSuccess(activeSession);
+    } else {
+      getTwitterAuthClient().authorize(this, callback);
+    }
   }
 
   @Override
@@ -63,7 +68,7 @@ public class TwitterAuthActivity extends SimpleAuthActivity {
     }
   }
 
-  private void handleSuccess(Result<TwitterSession> sessionResult) {
+  private void handleSuccess(TwitterSession session) {
     final ProgressDialog loadingDialog = DialogUtils.createLoadingDialog(this);
     loadingDialog.show();
 
@@ -78,7 +83,7 @@ public class TwitterAuthActivity extends SimpleAuthActivity {
         SocialUser user = new SocialUser();
         User data = userResult.data;
         user.userId = String.valueOf(data.getId());
-        user.accessToken = sessionResult.data.getAuthToken().token;
+        user.accessToken = session.getAuthToken().token;
         user.profilePictureUrl = String.format(PROFILE_PIC_URL, data.screenName);
         user.email = data.email != null ? data.email : "";
         user.fullName = data.name;
