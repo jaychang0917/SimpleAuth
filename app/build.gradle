@@ -31,7 +31,7 @@ android.defaultConfig.manifestPlaceholders = [
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.jakewharton:butterknife:8.7.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
     compile project(':library')

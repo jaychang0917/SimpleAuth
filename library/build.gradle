@@ -42,9 +42,9 @@ android.buildTypes.debug.manifestPlaceholders = [
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.facebook.android:facebook-android-sdk:4.7.0'
     compile 'com.google.android.gms:play-services-auth:11.0.2'
     compile 'com.twitter.sdk.android:twitter-core:3.0.0'
-    compile 'com.github.jaychang0917:Utils:0.2.8'
+    compile 'com.github.jaychang0917:Utils:0.3.2'
 }
