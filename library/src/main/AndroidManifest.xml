@@ -8,31 +8,31 @@
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
-            android:value="${facebookAppId}\0" />
+            android:value="${facebookAppId}" />
 
         <meta-data
             android:name="@string/sa_com.jaychang.sa.googleWebClientId"
-            android:value="${googleWebClientId}\0" />
+            android:value="${googleWebClientId}" />
 
         <meta-data
             android:name="@string/sa_com.jaychang.sa.twitterConsumerKey"
-            android:value="${twitterConsumerKey}\0" />
+            android:value="${twitterConsumerKey}" />
 
         <meta-data
             android:name="@string/sa_com.jaychang.sa.twitterConsumerSecret"
-            android:value="${twitterConsumerSecret}\0" />
+            android:value="${twitterConsumerSecret}" />
 
         <meta-data
             android:name="@string/sa_com.jaychang.sa.instagramClientId"
-            android:value="${instagramClientId}\0" />
+            android:value="${instagramClientId}" />
 
         <meta-data
             android:name="@string/sa_com.jaychang.sa.instagramClientSecret"
-            android:value="${instagramClientSecret}\0" />
+            android:value="${instagramClientSecret}" />
 
         <meta-data
             android:name="@string/sa_com.jaychang.sa.instagramRedirectUri"
-            android:value="${instagramRedirectUri}\0" />
+            android:value="${instagramRedirectUri}" />
 
         <activity
             android:name=".FacebookAuthActivity"
