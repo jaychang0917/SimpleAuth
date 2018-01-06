@@ -70,6 +70,9 @@ void connectFacebook() {
   });
 }
 ```
+## Remark
+#### Google auth
+Please be reminded that to create an **Android** oauth client and fill in **SHA1** of your keystore and **package name**
 
 ## Advanced Usage
 #### Disconnection
@@ -87,10 +90,6 @@ void revokeFacebook() {
   SimpleAuth.getInstance().revokeFacebook();
 }
 ```
-
-## Remark
-#### Google auth
-Please be reminded that to create an **Android** oauth client and fill in **SHA1** of your release keystore for release build variant.
 
 ## License
 ```
