@@ -72,7 +72,7 @@ void connectFacebook() {
 ```
 ### Remark
 #### Google auth
-Please be reminded that to create an **Android** oauth client and fill in **SHA1** of your keystore and **package name**
+Please be reminded to create an **Android** oauth client and fill in **SHA1** of your keystore and **package name**
 
 ## Advanced Usage
 #### Disconnection
