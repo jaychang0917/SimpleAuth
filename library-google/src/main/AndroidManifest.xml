@@ -1,0 +1,14 @@
+<manifest package="com.jaychang.sa.google"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+
+        <activity
+            android:name=".GoogleAuthActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask" />
+
+    </application>
+
+</manifest>

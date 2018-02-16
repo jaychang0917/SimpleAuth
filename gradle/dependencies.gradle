@@ -1,0 +1,54 @@
+def versions = [
+    kotlin : '1.1.60',
+    support: '27.0.2',
+    butterknife: '8.7.0'
+]
+
+def build = [
+    buildToolsVersion: '27.0.3',
+    compileSdkVersion: 27,
+    minSdkVersion: 15,
+    targetSdkVersion: 27,
+
+    gradlePlugins: [
+        android: 'com.android.tools.build:gradle:3.0.0',
+        kotlin: "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}",
+        github: 'com.github.dcendents:android-maven-gradle-plugin:1.5',
+        bintray: 'com.novoda:bintray-release:0.8.0'
+    ]
+]
+
+def kotlin = [
+    stdlib: "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin}",
+]
+
+def support = [
+    appcompat: "com.android.support:appcompat-v7:${versions.support}",
+]
+
+def facebookSdk = 'com.facebook.android:facebook-android-sdk:4.7.0'
+def twitterSdk = 'com.twitter.sdk.android:twitter-core:3.0.0'
+def googleAuth = 'com.google.android.gms:play-services-auth:11.0.2'
+def utils = 'com.github.jaychang0917:Utils:0.3.2'
+
+def butterKnife = [
+    core: "com.jakewharton:butterknife:${versions.butterknife}",
+    compiler: "com.jakewharton:butterknife-compiler:${versions.butterknife}"
+]
+
+def retrofit2 = 'com.squareup.retrofit2:retrofit:2.3.0'
+def gson = 'com.google.code.gson:gson:2.8.2'
+
+ext.deps = [
+    "build": build,
+    "kotlin": kotlin,
+    "support": support,
+    "versions": versions,
+    "butterKnife": butterKnife,
+    "facebookSdk": facebookSdk,
+    "twitterSdk": twitterSdk,
+    "googleAuth": googleAuth,
+    "retrofit2": retrofit2,
+    "gson": gson,
+    "utils": utils
+]

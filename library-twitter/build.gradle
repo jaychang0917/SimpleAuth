@@ -1,6 +1,6 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.novoda.bintray-release'
 
 buildscript {
     repositories {
@@ -8,19 +8,21 @@ buildscript {
     }
     dependencies {
         classpath deps.build.gradlePlugins.kotlin
+        classpath deps.build.gradlePlugins.bintray
     }
 }
 
 android {
     compileSdkVersion deps.build.compileSdkVersion
     buildToolsVersion deps.build.buildToolsVersion
+
     defaultConfig {
-        applicationId "com.jaychang.demo.sa"
         minSdkVersion deps.build.minSdkVersion
         targetSdkVersion deps.build.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -33,11 +35,15 @@ android {
 }
 
 dependencies {
-    implementation deps.butterKnife.core
-    annotationProcessor deps.butterKnife.compiler
-    implementation project(':library-common')
-    implementation project(':library-facebook')
-    implementation project(':library-google')
-    implementation project(':library-instagram')
-    implementation project(':library-twitter')
+    compile deps.twitterSdk
+    compileOnly project(':library-common')
+}
+
+publish {
+    userOrg = 'jaychang0917'
+    groupId = 'com.jaychang'
+    artifactId = 'simpleauth-twitter'
+    publishVersion = '2.0.0'
+    desc = 'A easy to use social authentication android library. (Facebook, Google, Twitter, Instagram)'
+    website = 'https://github.com/jaychang0917/SimpleAuth'
 }

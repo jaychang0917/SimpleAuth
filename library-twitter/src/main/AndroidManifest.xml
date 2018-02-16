@@ -1,0 +1,19 @@
+<manifest package="com.jaychang.sa.twitter"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+
+        <activity
+            android:name=".TwitterAuthActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask" />
+
+        <provider
+            android:authorities="${applicationId}.TwitterInitProvider"
+            android:name=".TwitterInitProvider"
+            android:exported="false" />
+
+    </application>
+
+</manifest>
