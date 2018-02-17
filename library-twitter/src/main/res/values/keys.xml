@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="com.jaychang.sa.twitterConsumerKey">com.jaychang.sa.twitterConsumerKey</string>
+    <string name="com.jaychang.sa.twitterConsumerSecret">com.jaychang.sa.twitterConsumerSecret</string>
+</resources>

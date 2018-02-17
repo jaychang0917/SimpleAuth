@@ -39,6 +39,10 @@ dependencies {
     compileOnly project(':library-common')
 }
 
+android.buildTypes.debug.manifestPlaceholders = [
+    googleWebClientId: "775503623453-sqk59kuvr2f8qkb9fkcnhef5uvn9riu4.apps.googleusercontent.com",
+]
+
 publish {
     userOrg = 'jaychang0917'
     groupId = 'com.jaychang'

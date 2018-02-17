@@ -2,6 +2,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application>
+        <meta-data
+            android:name="@string/com.jaychang.sa.instagramClientId"
+            android:value="\ ${instagramClientId}" />
+
+        <meta-data
+            android:name="@string/com.jaychang.sa.instagramClientSecret"
+            android:value="\ ${instagramClientSecret}" />
+
+        <meta-data
+            android:name="@string/com.jaychang.sa.instagramRedirectUrl"
+            android:value="\ ${instagramRedirectUrl}" />
 
         <activity
             android:name=".InstagramAuthActivity"

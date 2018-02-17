@@ -25,6 +25,7 @@ import com.jaychang.sa.DialogUtils;
 import com.jaychang.sa.SimpleAuth;
 import com.jaychang.sa.SimpleAuthActivity;
 import com.jaychang.sa.SocialUser;
+import com.jaychang.utils.AppUtils;
 import com.jaychang.utils.PreferenceUtils;
 
 import java.util.ArrayList;
@@ -55,7 +56,7 @@ public class GoogleAuthActivity extends SimpleAuthActivity
   protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
-    String clientId = SimpleAuth.authConfig.getGoogleWebClientId();
+    String clientId = AppUtils.getMetaDataValue(this, getString(R.string.com_jaychang_sa_googleWebClientId));
 
     GoogleSignInOptions.Builder gsoBuilder = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
       .requestId()

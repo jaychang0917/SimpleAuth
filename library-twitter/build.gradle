@@ -39,6 +39,11 @@ dependencies {
     compileOnly project(':library-common')
 }
 
+android.buildTypes.debug.manifestPlaceholders = [
+    twitterConsumerKey   : "r59jTevJfWg6YDGldRGiks8Rl",
+    twitterConsumerSecret: "MQAQtngew0imjGduM3mEbWE1fdUbGOekYEcvm0ybCoJy5FUrju",
+]
+
 publish {
     userOrg = 'jaychang0917'
     groupId = 'com.jaychang'

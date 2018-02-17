@@ -4,14 +4,11 @@ import android.content.ContentProvider
 import android.content.ContentValues
 import android.database.Cursor
 import android.net.Uri
-import com.jaychang.sa.Initializer
 
 class FacebookInitProvider : ContentProvider() {
 
   override fun onCreate(): Boolean {
-    Initializer.facebookInitHook = {
-      initFacebook()
-    }
+    initFacebook(context.applicationContext)
     return false
   }
 

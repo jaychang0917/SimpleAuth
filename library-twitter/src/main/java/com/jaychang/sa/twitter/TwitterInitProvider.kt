@@ -4,14 +4,11 @@ import android.content.ContentProvider
 import android.content.ContentValues
 import android.database.Cursor
 import android.net.Uri
-import com.jaychang.sa.Initializer
 
 class TwitterInitProvider : ContentProvider() {
 
   override fun onCreate(): Boolean {
-    Initializer.twitterInitHook = {
-      initTwitter()
-    }
+    initTwitter(context.applicationContext)
     return false
   }
 

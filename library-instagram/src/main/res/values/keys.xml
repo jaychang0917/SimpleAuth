@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="com.jaychang.sa.instagramClientId">com.jaychang.sa.instagramClientId</string>
+    <string name="com.jaychang.sa.instagramClientSecret">com.jaychang.sa.instagramClientSecret</string>
+    <string name="com.jaychang.sa.instagramRedirectUrl">com.jaychang.sa.instagramRedirectUrl</string>
+</resources>

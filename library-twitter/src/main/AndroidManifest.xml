@@ -2,6 +2,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application>
+        <meta-data
+            android:name="@string/com.jaychang.sa.twitterConsumerKey"
+            android:value="\ ${twitterConsumerKey}" />
+
+        <meta-data
+            android:name="@string/com.jaychang.sa.twitterConsumerSecret"
+            android:value="\ ${twitterConsumerSecret}" />
 
         <activity
             android:name=".TwitterAuthActivity"

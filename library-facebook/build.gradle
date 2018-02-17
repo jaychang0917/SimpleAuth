@@ -39,6 +39,10 @@ dependencies {
     compile deps.facebookSdk
 }
 
+android.buildTypes.debug.manifestPlaceholders = [
+    facebookAppId: "189953571452011",
+]
+
 publish {
     userOrg = 'jaychang0917'
     groupId = 'com.jaychang'

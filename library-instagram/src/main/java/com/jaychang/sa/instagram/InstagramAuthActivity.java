@@ -16,9 +16,9 @@ import com.google.gson.annotations.SerializedName;
 import com.jaychang.sa.AuthData;
 import com.jaychang.sa.AuthDataHolder;
 import com.jaychang.sa.DialogUtils;
-import com.jaychang.sa.SimpleAuth;
 import com.jaychang.sa.SimpleAuthActivity;
 import com.jaychang.sa.SocialUser;
+import com.jaychang.utils.AppUtils;
 
 import java.io.IOException;
 
@@ -51,9 +51,9 @@ public class InstagramAuthActivity extends SimpleAuthActivity {
   protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
-    clientId = SimpleAuth.authConfig.getInstagramClientId();
-    clientSecret = SimpleAuth.authConfig.getInstagramClientSecret();
-    redirectUrl = SimpleAuth.authConfig.getInstagramRedirectUrl();
+    clientId = AppUtils.getMetaDataValue(this, getString(R.string.com_jaychang_sa_instagramClientId));
+    clientSecret = AppUtils.getMetaDataValue(this, getString(R.string.com_jaychang_sa_instagramClientSecret));
+    redirectUrl = AppUtils.getMetaDataValue(this, getString(R.string.com_jaychang_sa_instagramRedirectUrl));
 
     loadingDialog = DialogUtils.createLoadingDialog(this);
 
