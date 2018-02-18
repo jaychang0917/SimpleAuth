@@ -43,7 +43,7 @@ dependencies {
 android.buildTypes.debug.manifestPlaceholders = [
     instagramClientId    : "76bedc2d27dd4e52841e576d4ce8cc79",
     instagramClientSecret: "28d91eb23ab440beb55b3a3f112f4bb2",
-    instagramRedirectUri : "https://localhost/oauth2redirect"
+    instagramRedirectUrl : "https://localhost/oauth2redirect"
 ]
 
 publish {
