@@ -36,7 +36,7 @@ android {
 
 dependencies {
     compileOnly project(':library-common')
-    compile deps.facebookSdk
+    api deps.facebookSdk
 }
 
 android.buildTypes.debug.manifestPlaceholders = [

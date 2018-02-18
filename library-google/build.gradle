@@ -35,8 +35,8 @@ android {
 }
 
 dependencies {
-    compile deps.googleAuth
     compileOnly project(':library-common')
+    api deps.googleAuth
 }
 
 android.buildTypes.debug.manifestPlaceholders = [

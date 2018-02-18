@@ -43,6 +43,7 @@ android.defaultConfig.manifestPlaceholders = [
 ]
 
 dependencies {
+    implementation deps.support.appcompat
     implementation deps.butterKnife.core
     annotationProcessor deps.butterKnife.compiler
     implementation project(':library-common')

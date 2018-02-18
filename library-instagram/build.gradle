@@ -35,9 +35,9 @@ android {
 }
 
 dependencies {
-    compile deps.retrofit2
-    compile deps.gson
     compileOnly project(':library-common')
+    implementation deps.retrofit2
+    implementation deps.gson
 }
 
 android.buildTypes.debug.manifestPlaceholders = [

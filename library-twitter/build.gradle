@@ -35,8 +35,8 @@ android {
 }
 
 dependencies {
-    compile deps.twitterSdk
     compileOnly project(':library-common')
+    api deps.twitterSdk
 }
 
 android.buildTypes.debug.manifestPlaceholders = [
