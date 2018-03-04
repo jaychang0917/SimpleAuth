@@ -1,4 +1,4 @@
-<manifest package="demo.simpleauth"
+<manifest package="com.jaychang.demo.sa"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
@@ -8,14 +8,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".MainActivity">
+        <activity android:name="com.jaychang.demo.sa.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".ProfileActivity" />
+        <activity android:name="com.jaychang.demo.sa.ProfileActivity" />
 
     </application>
 

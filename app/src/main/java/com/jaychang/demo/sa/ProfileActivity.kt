@@ -1,4 +1,4 @@
-package demo.simpleauth
+package com.jaychang.demo.sa
 
 import android.content.Context
 import android.content.Intent

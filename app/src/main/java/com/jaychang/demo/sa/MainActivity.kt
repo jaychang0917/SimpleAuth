@@ -1,4 +1,4 @@
-package demo.simpleauth
+package com.jaychang.demo.sa
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
