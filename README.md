@@ -1,33 +1,29 @@
 # SimpleAuth
-[![](https://jitpack.io/v/jaychang0917/Simpleauth.svg)](https://jitpack.io/#jaychang0917/Simpleauth)
+[![Download](https://api.bintray.com/packages/jaychang0917/maven/simpleauth/images/download.svg) ](https://bintray.com/jaychang0917/maven/simpleauth/_latestVersion)
 
 A easy to use social authentication android library. (Facebook, Google, Twitter, Instagram)
 
 ## Installation
-In your project level build.gradle :
-
-```java
-allprojects {
-    repositories {
-        ...
-        maven { url "https://jitpack.io" }
-    }
-}
-```
-
 In your app level build.gradle :
 
 ```java
 dependencies {
-    compile 'com.github.jaychang0917:SimpleAuth:{latest_version}'
+    compile 'com.jaychang:simpleauth:2.0.0'
+    // if you want to use facebook auth
+    compile 'com.jaychang:simpleauth-facebook:2.0.0'
+    // if you want to use google auth
+    compile 'com.jaychang:simpleauth-google:2.0.0'
+    // if you want to use instagram auth
+    compile 'com.jaychang:simpleauth-instagram:2.0.0'
+    // if you want to use twitter auth
+    compile 'com.jaychang:simpleauth-twitter:2.0.0'
 }
 ```
-[![](https://jitpack.io/v/jaychang0917/Simpleauth.svg)](https://jitpack.io/#jaychang0917/Simpleauth)
 
 
 ## Basic Usage
 #### 1. Configure the SimpleAuth
-In your app level build.gradle, set up the configs. **Leave the field empty if you don't need it, DON'T remove any fields.**
+In your app level build.gradle, set up the configs.
 
 ```xml
 android.defaultConfig.manifestPlaceholders = [
