@@ -1,5 +1,8 @@
 ## Change Log
 
+### Version 2.0.1 (2018-03-09)
+- Fix [#7](https://github.com/jaychang0917/SimpleAuth/issues/7)
+
 ### Version 1.0.5 (2017-11-01)
 - Fix wrong meta-value genertation in Android Studio 3.0 issue [PR#2](https://github.com/jaychang0917/SimpleAuth/pull/2)
 
