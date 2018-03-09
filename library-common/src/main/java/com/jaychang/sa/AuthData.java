@@ -16,7 +16,11 @@ public class AuthData {
     return scopes;
   }
 
-  public AuthCallback getCallback() {
+  AuthCallback getCallback() {
     return callback;
+  }
+
+  void clearCallback() {
+    callback = null;
   }
 }

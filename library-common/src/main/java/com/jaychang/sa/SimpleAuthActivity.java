@@ -30,4 +30,9 @@ public abstract class SimpleAuthActivity extends AppCompatActivity {
 
   protected abstract AuthData getAuthData();
 
+  @Override
+  protected void onDestroy() {
+    super.onDestroy();
+    getAuthData().clearCallback();
+  }
 }
