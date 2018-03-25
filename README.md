@@ -33,7 +33,7 @@ android.defaultConfig.manifestPlaceholders = [
         twitterConsumerSecret: "your twitter consumer secret",
         instagramClientId    : "your instagram client id",
         instagramClientSecret: "your instagram client secret",
-        instagramRedirectUri : "your instagram redirect uri"
+        instagramRedirectUrl : "your instagram redirect uri"
 ]
 ```
 
