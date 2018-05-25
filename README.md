@@ -8,15 +8,15 @@ In your app level build.gradle :
 
 ```java
 dependencies {
-    compile 'com.jaychang:simpleauth:2.0.3'
+    compile 'com.jaychang:simpleauth:2.1.0'
     // if you want to use facebook auth
-    compile 'com.jaychang:simpleauth-facebook:2.0.3'
+    compile 'com.jaychang:simpleauth-facebook:2.1.0'
     // if you want to use google auth
-    compile 'com.jaychang:simpleauth-google:2.0.3'
+    compile 'com.jaychang:simpleauth-google:2.1.0'
     // if you want to use instagram auth
-    compile 'com.jaychang:simpleauth-instagram:2.0.3'
+    compile 'com.jaychang:simpleauth-instagram:2.1.0'
     // if you want to use twitter auth
-    compile 'com.jaychang:simpleauth-twitter:2.0.3'
+    compile 'com.jaychang:simpleauth-twitter:2.1.0'
 }
 ```
 
@@ -42,7 +42,7 @@ android.defaultConfig.manifestPlaceholders = [
 void connectFacebook() {
   List<String> scopes = Arrays.asList("user_birthday", "user_friends");
 
-  SimpleAuth.getInstance().connectFacebook(scopes, new AuthCallback() {
+  SimpleAuth.connectFacebook(scopes, new AuthCallback() {
     @Override
     public void onSuccess(SocialUser socialUser) {
       Log.d(TAG, "userId:" + socialUser.userId)
@@ -75,7 +75,7 @@ Please be reminded to create an **Android** oauth client and fill in **SHA1** of
 The active session will be cleared if the social app is installed in the device, otherwise app cookies will be cleared (i.e. user need to login again)
 ```java
 void disconnectFacebook() {
-  SimpleAuth.getInstance().disconnectFacebook();
+  SimpleAuth.disconnectFacebook();
 }
 ```
 
@@ -83,7 +83,7 @@ void disconnectFacebook() {
 After revocation, the permissions authorization page should be shown again. Only facebook and google provide this function.
 ```java
 void revokeFacebook() {
-  SimpleAuth.getInstance().revokeFacebook();
+  SimpleAuth.revokeFacebook();
 }
 ```
 

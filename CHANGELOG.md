@@ -1,5 +1,8 @@
 ## Change Log
 
+### Version 2.1.0 (2018-05-25)
+- Be java backward compatible
+
 ### Version 2.0.3 (2018-05-25)
 - Fix compile issue
 
