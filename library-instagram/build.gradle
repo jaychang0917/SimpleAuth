@@ -35,7 +35,7 @@ android {
 }
 
 dependencies {
-    compileOnly project(':library-common')
+    api project(':library-common')
     implementation deps.retrofit2
     implementation deps.gson
 }

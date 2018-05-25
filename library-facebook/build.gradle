@@ -35,7 +35,7 @@ android {
 }
 
 dependencies {
-    compileOnly project(':library-common')
+    api project(':library-common')
     api deps.facebookSdk
 }
 
