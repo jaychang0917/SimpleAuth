@@ -18,7 +18,7 @@ import com.jaychang.sa.AuthDataHolder;
 import com.jaychang.sa.DialogUtils;
 import com.jaychang.sa.SimpleAuthActivity;
 import com.jaychang.sa.SocialUser;
-import com.jaychang.utils.AppUtils;
+import com.jaychang.sa.utils.AppUtils;
 
 import java.io.IOException;
 

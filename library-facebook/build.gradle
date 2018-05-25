@@ -36,6 +36,7 @@ android {
 
 dependencies {
     api project(':library-common')
+    implementation deps.support.appcompat
     api deps.facebookSdk
 }
 

@@ -37,7 +37,6 @@ android {
 dependencies {
     api deps.kotlin.stdlib
     implementation deps.support.appcompat
-    api deps.utils
 }
 
 publish {

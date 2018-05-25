@@ -7,8 +7,7 @@ import com.facebook.GraphRequest
 import com.facebook.HttpMethod
 import com.facebook.login.LoginManager
 import com.jaychang.sa.*
-import com.jaychang.utils.AppUtils
-
+import com.jaychang.sa.utils.AppUtils
 
 internal fun initFacebook(context: Context) {
   val facebookAppId = AppUtils.getMetaDataValue(context, context.getString(R.string.com_jaychang_sa_facebookId))

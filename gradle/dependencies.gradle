@@ -29,7 +29,6 @@ def support = [
 def facebookSdk = 'com.facebook.android:facebook-android-sdk:4.7.0'
 def twitterSdk = 'com.twitter.sdk.android:twitter-core:3.0.0'
 def googleAuth = 'com.google.android.gms:play-services-auth:11.0.2'
-def utils = 'com.github.jaychang0917:Utils:0.3.2'
 
 def butterKnife = [
     core: "com.jakewharton:butterknife:${versions.butterknife}",
@@ -49,6 +48,5 @@ ext.deps = [
     "twitterSdk": twitterSdk,
     "googleAuth": googleAuth,
     "retrofit2": retrofit2,
-    "gson": gson,
-    "utils": utils
+    "gson": gson
 ]

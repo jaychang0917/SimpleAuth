@@ -2,7 +2,7 @@ package com.jaychang.sa.twitter
 
 import android.content.Context
 import com.jaychang.sa.*
-import com.jaychang.utils.AppUtils
+import com.jaychang.sa.utils.AppUtils
 import com.twitter.sdk.android.core.Twitter
 import com.twitter.sdk.android.core.TwitterAuthConfig
 import com.twitter.sdk.android.core.TwitterConfig
