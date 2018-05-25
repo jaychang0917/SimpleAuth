@@ -5,14 +5,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import com.jaychang.sa.SimpleAuth
 import com.jaychang.sa.SocialUser
-import com.jaychang.sa.facebook.disconnectFacebook
-import com.jaychang.sa.facebook.revokeFacebook
-import com.jaychang.sa.google.disconnectGoogle
-import com.jaychang.sa.google.revokeGoogle
-import com.jaychang.sa.instagram.disconnectInstagram
-import com.jaychang.sa.twitter.disconnectTwitter
+import com.jaychang.sa.facebook.SimpleAuth
 import kotlinx.android.synthetic.main.activity_profile.*
 
 class ProfileActivity : AppCompatActivity() {
@@ -46,9 +40,9 @@ class ProfileActivity : AppCompatActivity() {
   fun disconnect(view: View) {
     when (type) {
       MainActivity.FACEBOOK -> SimpleAuth.disconnectFacebook()
-      MainActivity.GOOGLE -> SimpleAuth.disconnectGoogle()
-      MainActivity.TWITTER -> SimpleAuth.disconnectTwitter()
-      MainActivity.INSTAGRAM -> SimpleAuth.disconnectInstagram()
+      MainActivity.GOOGLE -> com.jaychang.sa.google.SimpleAuth.disconnectGoogle()
+      MainActivity.TWITTER -> com.jaychang.sa.twitter.SimpleAuth.disconnectTwitter()
+      MainActivity.INSTAGRAM -> com.jaychang.sa.instagram.SimpleAuth.disconnectInstagram()
     }
     finish()
   }
@@ -56,7 +50,7 @@ class ProfileActivity : AppCompatActivity() {
   fun revoke(view: View) {
     when (type) {
       MainActivity.FACEBOOK -> SimpleAuth.revokeFacebook()
-      MainActivity.GOOGLE -> SimpleAuth.revokeGoogle()
+      MainActivity.GOOGLE -> com.jaychang.sa.google.SimpleAuth.revokeGoogle()
       MainActivity.TWITTER -> {
         // no-op
       }

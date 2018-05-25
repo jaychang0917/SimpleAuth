@@ -22,7 +22,6 @@ import com.google.android.gms.common.api.Status;
 import com.jaychang.sa.AuthData;
 import com.jaychang.sa.AuthDataHolder;
 import com.jaychang.sa.DialogUtils;
-import com.jaychang.sa.SimpleAuth;
 import com.jaychang.sa.SimpleAuthActivity;
 import com.jaychang.sa.SocialUser;
 import com.jaychang.sa.utils.AppUtils;
@@ -243,7 +242,7 @@ public class GoogleAuthActivity extends SimpleAuthActivity
     return PreferenceUtils.getBoolean(context, KEY_IS_GOOGLE_DISCONNECT_REQUESTED);
   }
 
-  static void setGoogleDisconnectRequested(Context context, boolean isRequested) {
+  public static void setGoogleDisconnectRequested(Context context, boolean isRequested) {
     PreferenceUtils.saveBoolean(context, KEY_IS_GOOGLE_DISCONNECT_REQUESTED, isRequested);
   }
 
@@ -251,7 +250,7 @@ public class GoogleAuthActivity extends SimpleAuthActivity
     return PreferenceUtils.getBoolean(context, KEY_IS_GOOGLE_REVOKE_REQUESTED);
   }
 
-  static void setGoogleRevokeRequested(Context context, boolean isRequested) {
+  public static void setGoogleRevokeRequested(Context context, boolean isRequested) {
     PreferenceUtils.saveBoolean(context, KEY_IS_GOOGLE_REVOKE_REQUESTED, isRequested);
   }
 }

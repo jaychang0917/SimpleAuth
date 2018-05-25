@@ -5,12 +5,8 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
 import com.jaychang.sa.AuthCallback
-import com.jaychang.sa.SimpleAuth
 import com.jaychang.sa.SocialUser
-import com.jaychang.sa.facebook.connectFacebook
-import com.jaychang.sa.google.connectGoogle
-import com.jaychang.sa.instagram.connectInstagram
-import com.jaychang.sa.twitter.connectTwitter
+import com.jaychang.sa.facebook.SimpleAuth
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -51,7 +47,7 @@ class MainActivity : AppCompatActivity() {
       "https://www.googleapis.com/auth/youtube.upload"
     )
 
-    SimpleAuth.connectGoogle(scopes, object : AuthCallback {
+    com.jaychang.sa.google.SimpleAuth.connectGoogle(scopes, object : AuthCallback {
       override fun onSuccess(socialUser: SocialUser) {
         ProfileActivity.start(this@MainActivity, GOOGLE, socialUser)
       }
@@ -67,7 +63,7 @@ class MainActivity : AppCompatActivity() {
   }
 
   fun connectTwitter(view: View) {
-    SimpleAuth.connectTwitter(object : AuthCallback {
+    com.jaychang.sa.twitter.SimpleAuth.connectTwitter(object : AuthCallback {
       override fun onSuccess(socialUser: SocialUser) {
         ProfileActivity.start(this@MainActivity, TWITTER, socialUser)
       }
@@ -85,7 +81,7 @@ class MainActivity : AppCompatActivity() {
   fun connectInstagram(view: View) {
     val scopes = Arrays.asList("follower_list", "likes")
 
-    SimpleAuth.connectInstagram(scopes, object : AuthCallback {
+    com.jaychang.sa.instagram.SimpleAuth.connectInstagram(scopes, object : AuthCallback {
       override fun onSuccess(socialUser: SocialUser) {
         ProfileActivity.start(this@MainActivity, INSTAGRAM, socialUser)
       }
