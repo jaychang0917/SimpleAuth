@@ -49,7 +49,7 @@ publish {
     userOrg = 'jaychang0917'
     groupId = 'com.jaychang'
     artifactId = 'simpleauth-twitter'
-    publishVersion = '2.0.2'
+    publishVersion = '2.0.3'
     desc = 'A easy to use social authentication android library. (Facebook, Google, Twitter, Instagram)'
     website = 'https://github.com/jaychang0917/SimpleAuth'
 }
