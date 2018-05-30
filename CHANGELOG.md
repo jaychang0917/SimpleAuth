@@ -1,5 +1,8 @@
 ## Change Log
 
+### Version 2.1.1 (2018-05-30)
+- Fix [#12](https://github.com/jaychang0917/SimpleAuth/issues/12) and [#17](https://github.com/jaychang0917/SimpleAuth/issues/17)
+
 ### Version 2.1.0 (2018-05-25)
 - Be java backward compatible
 
