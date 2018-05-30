@@ -110,12 +110,12 @@ public class FacebookAuthActivity extends SimpleAuthActivity
   public void onCompleted(JSONObject object, GraphResponse response) {
     try {
       SocialUser user = new SocialUser();
-      user.userId = object.getString("id");
+      user.userId = getValue("id", object);
       user.accessToken = AccessToken.getCurrentAccessToken().getToken();
       user.profilePictureUrl = String.format(PROFILE_PIC_URL, user.userId);
-      user.email = object.getString("email");
-      user.fullName = object.getString("name");
-      user.pageLink = object.getString("link");
+      user.email = getValue("email", object);
+      user.fullName = getValue("name", object);
+      user.pageLink = getValue("link", object);
       loadingDialog.dismiss();
       handleSuccess(user);
     } catch (JSONException e) {
@@ -124,4 +124,10 @@ public class FacebookAuthActivity extends SimpleAuthActivity
     }
   }
 
+  private String getValue(String key, JSONObject object) throws JSONException {
+    if (object.has(key)) {
+      return object.getString(key);
+    }
+    return "";
+  }
 }
