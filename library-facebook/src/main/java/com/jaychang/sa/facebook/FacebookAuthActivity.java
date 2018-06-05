@@ -22,7 +22,6 @@ import com.jaychang.sa.SimpleAuthActivity;
 import com.jaychang.sa.SocialUser;
 import com.jaychang.sa.utils.DeviceUtils;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Arrays;
@@ -108,26 +107,14 @@ public class FacebookAuthActivity extends SimpleAuthActivity
 
   @Override
   public void onCompleted(JSONObject object, GraphResponse response) {
-    try {
-      SocialUser user = new SocialUser();
-      user.userId = getValue("id", object);
-      user.accessToken = AccessToken.getCurrentAccessToken().getToken();
-      user.profilePictureUrl = String.format(PROFILE_PIC_URL, user.userId);
-      user.email = getValue("email", object);
-      user.fullName = getValue("name", object);
-      user.pageLink = getValue("link", object);
-      loadingDialog.dismiss();
-      handleSuccess(user);
-    } catch (JSONException e) {
-      loadingDialog.dismiss();
-      handleError(e);
-    }
-  }
-
-  private String getValue(String key, JSONObject object) throws JSONException {
-    if (object.has(key)) {
-      return object.getString(key);
-    }
-    return "";
+    SocialUser user = new SocialUser();
+    user.userId =  object.optString("id", "");
+    user.accessToken = AccessToken.getCurrentAccessToken().getToken();
+    user.profilePictureUrl = String.format(PROFILE_PIC_URL, user.userId);
+    user.email = object.optString("email", "");
+    user.fullName = object.optString("name", "");
+    user.pageLink = object.optString("link", "");
+    loadingDialog.dismiss();
+    handleSuccess(user);
   }
 }
