@@ -15,7 +15,7 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import com.jaychang.sa.AuthData;
 import com.jaychang.sa.AuthDataHolder;
-import com.jaychang.sa.DialogUtils;
+import com.jaychang.sa.DialogFactory;
 import com.jaychang.sa.SimpleAuthActivity;
 import com.jaychang.sa.SocialUser;
 import com.jaychang.sa.utils.AppUtils;
@@ -55,7 +55,7 @@ public class InstagramAuthActivity extends SimpleAuthActivity {
     clientSecret = AppUtils.getMetaDataValue(this, getString(R.string.com_jaychang_sa_instagramClientSecret));
     redirectUrl = AppUtils.getMetaDataValue(this, getString(R.string.com_jaychang_sa_instagramRedirectUrl));
 
-    loadingDialog = DialogUtils.createLoadingDialog(this);
+    loadingDialog = DialogFactory.createLoadingDialog(this);
 
     String scopes = TextUtils.join("+", getAuthData().getScopes());
 

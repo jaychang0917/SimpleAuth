@@ -8,7 +8,7 @@ import android.support.annotation.Nullable;
 
 import com.jaychang.sa.AuthData;
 import com.jaychang.sa.AuthDataHolder;
-import com.jaychang.sa.DialogUtils;
+import com.jaychang.sa.DialogFactory;
 import com.jaychang.sa.SimpleAuthActivity;
 import com.jaychang.sa.SocialUser;
 import com.twitter.sdk.android.core.Callback;
@@ -74,7 +74,7 @@ public class TwitterAuthActivity extends SimpleAuthActivity {
   }
 
   private void handleSuccess(final TwitterSession session) {
-    final ProgressDialog loadingDialog = DialogUtils.createLoadingDialog(this);
+    final ProgressDialog loadingDialog = DialogFactory.createLoadingDialog(this);
     loadingDialog.show();
 
     TwitterApiClient twitterApiClient = TwitterCore.getInstance().getApiClient();

@@ -17,7 +17,7 @@ import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.jaychang.sa.AuthData;
 import com.jaychang.sa.AuthDataHolder;
-import com.jaychang.sa.DialogUtils;
+import com.jaychang.sa.DialogFactory;
 import com.jaychang.sa.SimpleAuthActivity;
 import com.jaychang.sa.SocialUser;
 import com.jaychang.sa.utils.DeviceUtils;
@@ -46,7 +46,7 @@ public class FacebookAuthActivity extends SimpleAuthActivity
   protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
-    loadingDialog = DialogUtils.createLoadingDialog(this);
+    loadingDialog = DialogFactory.createLoadingDialog(this);
 
     callbackManager = CallbackManager.Factory.create();
 

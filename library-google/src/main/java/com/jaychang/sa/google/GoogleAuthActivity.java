@@ -21,7 +21,7 @@ import com.google.android.gms.common.api.Scope;
 import com.google.android.gms.common.api.Status;
 import com.jaychang.sa.AuthData;
 import com.jaychang.sa.AuthDataHolder;
-import com.jaychang.sa.DialogUtils;
+import com.jaychang.sa.DialogFactory;
 import com.jaychang.sa.SimpleAuthActivity;
 import com.jaychang.sa.SocialUser;
 import com.jaychang.sa.utils.AppUtils;
@@ -159,7 +159,7 @@ public class GoogleAuthActivity extends SimpleAuthActivity
   }
 
   private void getAccessToken(final GoogleSignInAccount account, final AccessTokenListener listener) {
-    final ProgressDialog loadingDialog = DialogUtils.createLoadingDialog(this);
+    final ProgressDialog loadingDialog = DialogFactory.createLoadingDialog(this);
     loadingDialog.show();
 
     AsyncTask.execute(new Runnable() {
