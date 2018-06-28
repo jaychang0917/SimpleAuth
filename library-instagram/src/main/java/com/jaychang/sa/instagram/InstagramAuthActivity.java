@@ -62,9 +62,9 @@ public class InstagramAuthActivity extends SimpleAuthActivity {
     String url = String.format(AUTH_URL, clientId, redirectUrl, scopes);
 
     WebView webView = new WebView(this);
+    webView.getSettings().setJavaScriptEnabled(true);
     webView.loadUrl(url);
     webView.setWebViewClient(new WebViewClient() {
-
       @Override
       public void onPageStarted(WebView view, String url, Bitmap favicon) {
         super.onPageStarted(view, url, favicon);
