@@ -8,15 +8,15 @@ In your app level build.gradle :
 
 ```java
 dependencies {
-    compile 'com.jaychang:simpleauth:2.1.1'
+    compile 'com.jaychang:simpleauth:2.1.2'
     // if you want to use facebook auth
-    compile 'com.jaychang:simpleauth-facebook:2.1.1'
+    compile 'com.jaychang:simpleauth-facebook:2.1.2'
     // if you want to use google auth
-    compile 'com.jaychang:simpleauth-google:2.1.1'
+    compile 'com.jaychang:simpleauth-google:2.1.2'
     // if you want to use instagram auth
-    compile 'com.jaychang:simpleauth-instagram:2.1.1'
+    compile 'com.jaychang:simpleauth-instagram:2.1.2'
     // if you want to use twitter auth
-    compile 'com.jaychang:simpleauth-twitter:2.1.1'
+    compile 'com.jaychang:simpleauth-twitter:2.1.2'
 }
 ```
 
