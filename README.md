@@ -70,6 +70,9 @@ void connectFacebook() {
 #### Google auth
 Please be reminded to create an **Android** oauth client and fill in **SHA1** of your keystore and **package name**
 
+#### Twitter auth
+Please be reminded to fill in the **Callback URLs** (e.g. `twittersdk://`) of your twitter app.
+
 ## Advanced Usage
 #### Disconnection
 The active session will be cleared if the social app is installed in the device, otherwise app cookies will be cleared (i.e. user need to login again)
