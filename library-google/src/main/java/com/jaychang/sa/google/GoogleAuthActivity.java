@@ -113,7 +113,7 @@ public class GoogleAuthActivity extends SimpleAuthActivity
   protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     super.onActivityResult(requestCode, resultCode, data);
 
-    if (requestCode != RC_SIGN_IN || resultCode != RESULT_OK) {
+    if (requestCode != RC_SIGN_IN) {
       handCancel();
       return;
     }
