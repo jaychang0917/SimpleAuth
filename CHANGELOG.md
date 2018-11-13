@@ -1,5 +1,8 @@
 ## Change Log
 
+### Version 2.1.4 (2018-11-13)
+- Fix [#23](https://github.com/jaychang0917/SimpleAuth/issues/23)
+
 ### Version 2.1.3 (2018-07-08)
 - Fix [#20](https://github.com/jaychang0917/SimpleAuth/issues/20)
 
