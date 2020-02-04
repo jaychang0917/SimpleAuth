@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.huawei.agconnect'
+
 
 buildscript {
     repositories {
@@ -19,14 +21,38 @@ android {
         minSdkVersion deps.build.minSdkVersion
         targetSdkVersion deps.build.targetSdkVersion
         versionCode 1
+        multiDexEnabled true
         versionName "1.0"
     }
-    buildTypes {
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            storeFile file('HmsDemo.jks')
+            keyAlias 'HmsDemo'
+            keyPassword 'xxxxxx'
+            storePassword 'xxxxxx'
+            v1SigningEnabled true
+            v2SigningEnabled true
         }
     }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.release
+            debuggable true
+        }
+    }
+
     lintOptions {
         abortOnError false
     }
@@ -51,4 +77,8 @@ dependencies {
     implementation project(':library-google')
     implementation project(':library-instagram')
     implementation project(':library-twitter')
+    implementation project(':library-huawei')
+    implementation 'com.huawei.agconnect:agconnect-core:1.0.0.300'
+
+    implementation 'com.android.support:multidex:1.0.1'
 }

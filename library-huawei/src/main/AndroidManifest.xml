@@ -1,0 +1,33 @@
+<manifest package="com.jaychang.sa.huawei"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--HMS-SDK need network permission while hms is upgrading-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--chek network permissions-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--check wifi state-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--check phone state-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--if your app is running above android 8.0 and use "targetSdkVersion>=26, need add permission -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- running after lock screen -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- get the location detail -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- get the general location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+
+    <application>
+
+        <activity
+            android:name=".HuaweiIdActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask" />
+
+    </application>
+
+</manifest>
