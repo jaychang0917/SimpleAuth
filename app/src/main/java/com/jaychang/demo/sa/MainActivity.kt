@@ -9,10 +9,12 @@ import com.jaychang.sa.SocialUser
 import com.jaychang.sa.facebook.SimpleAuth
 import java.util.*
 
+
 class MainActivity : AppCompatActivity() {
 
   companion object {
     const val FACEBOOK = "FACEBOOK"
+    const val HUAWEI = "HUAWEI"
     const val GOOGLE = "GOOGLE"
     const val TWITTER = "TWITTER"
     const val INSTAGRAM = "INSTAGRAM"
@@ -29,6 +31,22 @@ class MainActivity : AppCompatActivity() {
     SimpleAuth.connectFacebook(scopes, object : AuthCallback {
       override fun onSuccess(socialUser: SocialUser) {
         ProfileActivity.start(this@MainActivity, FACEBOOK, socialUser)
+      }
+
+      override fun onError(error: Throwable) {
+        toast(error.message ?: "")
+      }
+
+      override fun onCancel() {
+        toast("Canceled")
+      }
+    })
+  }
+
+  fun connectHuawei(view: View) {
+    com.jaychang.sa.huawei.SimpleAuth.connectHuawei(object : AuthCallback {
+      override fun onSuccess(socialUser: SocialUser) {
+        ProfileActivity.start(this@MainActivity, HUAWEI, socialUser)
       }
 
       override fun onError(error: Throwable) {

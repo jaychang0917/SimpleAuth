@@ -7,6 +7,20 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/connectHwButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:background="#3b5998"
+        android:text="@string/connect_hw"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:onClick="connectHuawei"
+        android:textSize="18sp" />
+
+    <Button
         android:id="@+id/connectFbButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -57,5 +71,11 @@
         android:onClick="connectInstagram"
         android:textSize="18sp"
         android:textColor="@android:color/white" />
+
+    <FrameLayout
+        android:id="@+id/framelog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"></FrameLayout>
 
 </LinearLayout>

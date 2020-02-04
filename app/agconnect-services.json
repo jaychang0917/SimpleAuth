@@ -1,0 +1,11 @@
+{
+	"client":{
+		"cp_id":"xxxxxx",
+		"product_id":"xxxxxx",
+		"client_id":"xxxxxx",
+		"client_secret":"xxxxxx",
+		"app_id":"xxxxxx",
+		"package_name":"com.jaychang.demo.sa"
+	},
+	"configuration_version":"1.0"
+}
