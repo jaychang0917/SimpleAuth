@@ -39,6 +39,7 @@ class ProfileActivity : AppCompatActivity() {
 
   fun disconnect(view: View) {
     when (type) {
+      MainActivity.HUAWEI -> com.jaychang.sa.huawei.SimpleAuth.disconnectHuawei()
       MainActivity.FACEBOOK -> SimpleAuth.disconnectFacebook()
       MainActivity.GOOGLE -> com.jaychang.sa.google.SimpleAuth.disconnectGoogle()
       MainActivity.TWITTER -> com.jaychang.sa.twitter.SimpleAuth.disconnectTwitter()
@@ -49,6 +50,7 @@ class ProfileActivity : AppCompatActivity() {
 
   fun revoke(view: View) {
     when (type) {
+      MainActivity.HUAWEI -> com.jaychang.sa.huawei.SimpleAuth.revokeHuawei()
       MainActivity.FACEBOOK -> SimpleAuth.revokeFacebook()
       MainActivity.GOOGLE -> com.jaychang.sa.google.SimpleAuth.revokeGoogle()
       MainActivity.TWITTER -> {
